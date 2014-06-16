@@ -54,7 +54,7 @@
 <script id="UserItemTmpl" type="text/template">
     <div class="userItem" style="padding-left: 10px;<#if(online){#>
     <#if(user==name){#>
-        background: gold;
+        background: blue;
     <#}else{#>
         background: chartreuse;
     <#}#>
@@ -74,10 +74,10 @@
                     <span>[<#= formattedCreationTime #>]</span>
                     <span style="
                         <#if(user==sender.name){#>
-                            color: gold;
+                            color: blue;
                                 <#}else{#>
-                            color: chartreuse;
-                        <#}#>"><#= sender.name #></span>:
+                            color: red;
+                        <#}#>; font-size: 22px; "><#= sender.name #></span>:
                 </td>
             </tr>
             <tr>
