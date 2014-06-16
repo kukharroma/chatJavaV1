@@ -4,12 +4,16 @@ import com.chat.model.Message;
 import com.chat.model.User;
 import com.chat.services.IMessageService;
 import com.chat.services.IUserService;
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.session.SessionRegistry;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,10 +33,11 @@ public class ChatController extends BaseController {
     private IUserService userService;
 
     @RequestMapping(value = "/chat", method = RequestMethod.GET)
-    public String chat() {
+    public String chat(ModelMap model) {
         User user = getLoggedPerson();
         user.setOnline(true);
         userService.save(user);
+        model.put("name", user.getName());
         return "chat";
     }
 

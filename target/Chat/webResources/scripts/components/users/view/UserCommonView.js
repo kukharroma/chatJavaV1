@@ -2,14 +2,15 @@ var UserCommonView = Backbone.View.extend({
     container : "#users_list",
     initialize: function(attr){
         this.loadUsers()
+        var _this = this;
 
-//        setInterval(function(){
-//            this.loadUsers();
-//        }, 3000)
+        setInterval(function(){
+           _this.loadUsers();
+        }, 3000)
     },
 
     loadUsers: function(){
-        var _this = this
+        var _this = this;
         $.ajax({
             url: "getAllUsers",
             type: "GET",
@@ -22,9 +23,18 @@ var UserCommonView = Backbone.View.extend({
 
     renderChildren: function(listUsers){
         var _this = this
-        _.each(listUsers, function(user){
-            var model = new UserItemModel(user);
-            new UserItemView({model: model, container: _this.container})
-        })
+        $(this.container).empty();
+
+        var listGrouped = _.groupBy(listUsers, function(obj){ return obj.online})
+
+        render(listGrouped.true)
+        render(listGrouped.false)
+
+        function render(list){
+            _.each(list, function(user){
+                var model = new UserItemModel(user);
+                new UserItemView({model: model, container: _this.container})
+            })
+        }
     }
 })

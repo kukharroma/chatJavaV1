@@ -31,7 +31,7 @@ var MessagesCommonView = Backbone.View.extend({
             type: "GET",
             contentType: "application/json",
             data : {
-                dateFrom : $this.timeLastMessage ? $this.timeLastMessage.date : new Date().getTime()
+                dateFrom : $this.timeLastMessage ? $this.timeLastMessage.date : new Date().getTime()-1000
             },
             success: function(data){
                 if(data.length){

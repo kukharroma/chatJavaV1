@@ -256,6 +256,8 @@
             <version>1.9.2</version>
         </dependency>
 
+        <!-- Log4j-->
+
     </dependencies>
 
     <build>

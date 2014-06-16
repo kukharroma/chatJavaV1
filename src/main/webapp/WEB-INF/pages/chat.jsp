@@ -1,10 +1,12 @@
-<%@ page import="com.chat.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/pages/jsp-header.jsp" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="${contextPath}/styles/mainStyles.css" rel="stylesheet">
-<%! private User user;%>
-<%user = (User) request.getAttribute("user");%>
+<%! private String user;%>
+
+<script type="text/javascript">
+    user = "<%=(String) request.getAttribute("name")%>"
+</script>
 
 
 <script src="//code.jquery.com/jquery-1.9.1.js"></script>
@@ -50,7 +52,13 @@
 
 
 <script id="UserItemTmpl" type="text/template">
-    <div class="userItem" style="padding-left: 10px; <#if(online){#> background: chartreuse;  <#}else{#> background: darkgray ; <#}#>">
+    <div class="userItem" style="padding-left: 10px;<#if(online){#>
+    <#if(user==name){#>
+        background: gold;
+    <#}else{#>
+        background: chartreuse;
+    <#}#>
+    <#}else{#> background: darkgray; <#}#>">
         <span><#=name#></span>:
         <span><#if(online){#> Online
             <#}else{#> Offline
@@ -64,12 +72,17 @@
             <tr>
                 <td>
                     <span>[<#= formattedCreationTime #>]</span>
-                    <span style="color: red ; font-size : 20px"><#= sender.name #></span>:
+                    <span style="
+                        <#if(user==sender.name){#>
+                            color: gold;
+                                <#}else{#>
+                            color: chartreuse;
+                        <#}#>"><#= sender.name #></span>:
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span><#= message #></span>
+                    <span class="textContainer"><#= message #></span>
                 </td>
             </tr>
         </table>
