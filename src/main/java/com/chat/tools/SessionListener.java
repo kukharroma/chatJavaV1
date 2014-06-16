@@ -1,5 +1,6 @@
 package com.chat.tools;
 
+import com.chat.dao.IDBConfiguration;
 import com.chat.dao.IUserDAO;
 import com.chat.dao.impl.UserDAO;
 import com.chat.model.User;
@@ -12,10 +13,7 @@ import javax.servlet.http.HttpSessionListener;
 import java.net.UnknownHostException;
 
 
-public class SessionListener implements HttpSessionListener {
-
-
-    private static final String DB_NAME = "chatDB";
+public class SessionListener implements HttpSessionListener , IDBConfiguration {
 
     private IUserDAO userDAO;
 
