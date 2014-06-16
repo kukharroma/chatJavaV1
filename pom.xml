@@ -268,6 +268,26 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <groupId>org.mortbay.jetty</groupId>
+                <version>6.1.15</version>
+                <dependencies>
+                </dependencies>
+                <configuration>
+                    <contextPath>/</contextPath>
+                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>jetty.port</name>
+                            <value>8080</value>
+                        </systemProperty>
+                    </systemProperties>
+                    <stopPort>8085</stopPort>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
