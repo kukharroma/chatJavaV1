@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+    <definition name="welcome" template="/WEB-INF/pages/welcome.jsp"/>
+
+    <definition name="login" template="/WEB-INF/pages/login.jsp"/>
+
+    <definition name="registration" template="/WEB-INF/pages/registration.jsp"/>
+
+    <definition name="chat" template="/WEB-INF/pages/chat.jsp"/>
+
+</tiles-definitions>
