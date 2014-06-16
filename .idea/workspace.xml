@@ -69,7 +69,44 @@
     <favorites_list name="Chat" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="76" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-19.04" vertical-offset="0" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db-config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/db-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-8.48" vertical-offset="111" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="service-config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/service-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="51" selection-start="342" selection-end="342" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionListener.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="0.20767888" vertical-offset="0" max-vertical-offset="816">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -79,11 +116,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/chat/model/Massage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/controllers/BaseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/dao/IMassageDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/dao/impl/MassageDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/db-config.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/dialog.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/scripts/conversationScripts.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/tools/TimeFormater.java" />
@@ -107,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chat/dao/impl/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/dao/impl/MessageDAO.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/service-config.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/services/IUserService.java" />
@@ -115,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chat/controllers/ChatController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/messages/view/MessageCommonView.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/styles/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/webResources/styles/styleLogin.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/chat/services/impl/RegistrationService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/security-config.xml" />
@@ -130,6 +163,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/users/view/UserCommonView.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/chat.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/webResources/styles/mainStyles.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chat/dao/MongoConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/db-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/service-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml" />
       </list>
     </option>
   </component>
@@ -249,9 +286,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -288,16 +322,34 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="Chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webResources" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,93 +371,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webResources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -419,7 +396,7 @@
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/NedoBlog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -778,6 +755,16 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
       <option name="BCName" value="" />
       <option name="launcherParameters">
@@ -790,16 +777,6 @@
       </option>
       <option name="moduleName" value="" />
       <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -836,6 +813,25 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
       <option name="LOCAL" value="false" />
       <deployment />
@@ -854,25 +850,6 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.42" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
@@ -1006,11 +983,12 @@
       <workItem from="1402854681469" duration="140000" />
       <workItem from="1402854985029" duration="22786000" />
       <workItem from="1402908416298" duration="15951000" />
+      <workItem from="1402937147530" duration="339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170139000" />
+    <option name="totallyTimeSpent" value="170478000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1033,14 +1011,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1058,23 +1037,22 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3089124" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5826377" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28172207" sideWeight="0.49916527" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7479132" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30589125" sideWeight="0.49916527" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7462437" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327212" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43071786" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1093,8 +1071,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.639399" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29229608" sideWeight="0.5008347" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3089124" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1124,21 +1102,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="451" column="23" selection-start="20382" selection-end="20382" vertical-scroll-proportion="0.18613139" vertical-offset="6987" max-vertical-offset="22151" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/morphia/morphia/0.104/morphia-0.104-sources.jar!/com/google/code/morphia/query/FieldEnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="1513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/dao/impl/MessageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="680" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.2.0.RELEASE/spring-beans-3.2.0.RELEASE.jar!/org/springframework/beans/factory/xml/spring-beans-3.0.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state line="486" column="4" selection-start="18948" selection-end="18948" vertical-scroll-proportion="1.0852273" vertical-offset="8071" max-vertical-offset="19686" />
@@ -1183,13 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/db-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-12.72" vertical-offset="209" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/javax/naming/spi/NamingManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="320" column="0" selection-start="12306" selection-end="12306" vertical-scroll-proportion="0.3292683" vertical-offset="4852" max-vertical-offset="14365" />
@@ -1211,9 +1167,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/controllers/WelcomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="697" selection-end="697" vertical-scroll-proportion="0.56369984" vertical-offset="0" max-vertical-offset="714">
-          <folding />
-        </state>
+        <state line="26" column="27" selection-start="697" selection-end="697" vertical-scroll-proportion="0.56369984" vertical-offset="0" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/controllers/BaseController.java">
@@ -1236,11 +1190,6 @@
         <state line="218" column="0" selection-start="8325" selection-end="8325" vertical-scroll-proportion="0.14107142" vertical-offset="3066" max-vertical-offset="3961" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="5" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="799" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/controllers/ChatController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="24" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1156">
@@ -1252,30 +1201,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/messages/view/SendMessage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/service-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="697" selection-end="697" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="21" column="28" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.RELEASE/spring-security-core-3.1.4.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="17" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.31762654" vertical-offset="141" max-vertical-offset="714">
-          <folding />
-        </state>
+        <state line="32" column="17" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.31762654" vertical-offset="141" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.RELEASE/spring-security-core-3.1.4.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.12914485" vertical-offset="385" max-vertical-offset="1496">
-          <folding />
-        </state>
+        <state line="44" column="17" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.12914485" vertical-offset="385" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.1.4.RELEASE/spring-security-core-3.1.4.RELEASE-sources.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.java">
@@ -1288,20 +1224,6 @@
         <state line="168" column="0" selection-start="8999" selection-end="8999" vertical-scroll-proportion="0.1" vertical-offset="2103" max-vertical-offset="4828" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="67" selection-start="1348" selection-end="1348" vertical-scroll-proportion="-15.6" vertical-offset="103" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/security-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.6386861" vertical-offset="109" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="18" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1496">
@@ -1309,46 +1231,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/IRegistrationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/RegistrationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/validator/IUserValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="71" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="171" selection-end="171" vertical-scroll-proportion="0.2670157" vertical-offset="0" max-vertical-offset="573">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="31" selection-start="870" selection-end="870" vertical-scroll-proportion="0.6143106" vertical-offset="22" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/dao/IUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="335" selection-end="335" vertical-scroll-proportion="0.32635254" vertical-offset="0" max-vertical-offset="573">
-          <folding />
-        </state>
+        <state line="11" column="71" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/dao/impl/UserDAO.java">
@@ -1367,95 +1252,155 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jsp-header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.40402195" vertical-offset="0" max-vertical-offset="547">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.40402195" vertical-offset="0" max-vertical-offset="547" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="623" selection-end="623" vertical-scroll-proportion="-3.2692308" vertical-offset="238" max-vertical-offset="816">
-          <folding />
-        </state>
+        <state line="19" column="17" selection-start="623" selection-end="623" vertical-scroll-proportion="-3.2692308" vertical-offset="238" max-vertical-offset="816" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="-1.1153846" vertical-offset="5" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="2" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="-1.1153846" vertical-offset="5" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/messages/model/MessageItemModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
+        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="-0.21755028" vertical-offset="153" max-vertical-offset="1241">
-          <folding />
-        </state>
+        <state line="2" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="-0.21755028" vertical-offset="153" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/messages/view/MessageItemView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/messages/view/MessageCommonView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="42" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.6439791" vertical-offset="583" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="56" column="42" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.6439791" vertical-offset="583" max-vertical-offset="1258" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/webResources/scripts/components/users/view/UserCommonView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="595">
-          <folding />
-        </state>
+        <state line="8" column="6" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/chat.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="2" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-35.307693" vertical-offset="0" max-vertical-offset="1173">
-          <folding>
-            <element signature="tag#table#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1402921321120" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="99" column="2" selection-start="3587" selection-end="3587" vertical-scroll-proportion="-35.307693" vertical-offset="0" max-vertical-offset="1173" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/webResources/styles/mainStyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="45" selection-end="45" vertical-scroll-proportion="-2.8272252" vertical-offset="1688" max-vertical-offset="2261">
+        <state line="4" column="10" selection-start="45" selection-end="45" vertical-scroll-proportion="-2.8272252" vertical-offset="1688" max-vertical-offset="2261" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/tools/TimeFormater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.118673645" vertical-offset="0" max-vertical-offset="573">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="22" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/IRegistrationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/IMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/dao/IUserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="335" selection-end="335" vertical-scroll-proportion="0.32635254" vertical-offset="0" max-vertical-offset="573">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/dao/MongoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/RegistrationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="59" selection-start="918" selection-end="918" vertical-scroll-proportion="0.13961606" vertical-offset="226" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="31" selection-start="870" selection-end="870" vertical-scroll-proportion="0.6527051" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="31" selection-start="672" selection-end="672" vertical-scroll-proportion="0.6527051" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/security-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="49" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.6423358" vertical-offset="107" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="573">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="76" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-19.04" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/db-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-8.48" vertical-offset="111" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/service-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="51" selection-start="342" selection-end="342" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="0.20767888" vertical-offset="0" max-vertical-offset="816">
           <folding />
         </state>
       </provider>

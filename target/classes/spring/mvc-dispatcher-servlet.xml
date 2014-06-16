@@ -27,7 +27,6 @@
 
 
     <mvc:resources mapping="/scripts/**" location="/webResources/scripts/"/>
-    <mvc:resources mapping="/images/**" location="/webResources/images/"/>
     <mvc:resources mapping="/styles/**" location="/webResources/styles/"/>
 
 

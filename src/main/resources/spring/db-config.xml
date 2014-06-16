@@ -30,10 +30,4 @@
         <constructor-arg index="2" value="chatDB"/>
     </bean>
 
-    <bean id="dialogDAO" class="com.chat.dao.impl.DialogDAO">
-        <constructor-arg index="0" ref="mongo"/>
-        <constructor-arg index="1" ref="morphia"/>
-        <constructor-arg index="2" value="chatDB"/>
-    </bean>
-
 </beans>

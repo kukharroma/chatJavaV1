@@ -14,8 +14,6 @@
 
     <bean id="userService" class="com.chat.services.impl.UserService"/>
 
-    <bean id="dialogService" class="com.chat.services.impl.DialogService"/>
-
     <bean id="messageService" class="com.chat.services.impl.MessageService"/>
 
     <bean id="registrationService" class="com.chat.services.impl.RegistrationService"/>
