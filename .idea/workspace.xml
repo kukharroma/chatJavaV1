@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df48b2f8-3a54-41c7-9b82-f9a5c8a65611" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chat/controllers/ChatController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chat/controllers/ChatController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chat/services/impl/RegistrationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/chat/services/impl/RegistrationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chat/services/validator/impl/UserValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/chat/services/validator/impl/UserValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/db-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/db-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="df48b2f8-3a54-41c7-9b82-f9a5c8a65611" name="Default" comment="" />
     <ignored path="Chat.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,95 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RegistrationService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/RegistrationService.java">
+      <file leaf-file-name="README.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="26" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="850">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/controllers/ChatController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1241">
-              <folding>
-                <element signature="method#createMessage#0;class#ChatController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDBConfiguration.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/dao/IDBConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="34" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/tools/SessionListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="9" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="646">
-              <folding>
-                <element signature="method#getLoggedPerson#0;class#SessionListener#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeFormater.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/tools/TimeFormater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db-config.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/db-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="11" selection-start="302" selection-end="302" vertical-scroll-proportion="1.8085107" vertical-offset="0" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="76" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-14.76" vertical-offset="107" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/security-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="65" selection-start="809" selection-end="820" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="service-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/service-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="51" selection-start="342" selection-end="342" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="510">
+            <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.059336822" vertical-offset="0" max-vertical-offset="573">
               <folding />
             </state>
           </provider>
@@ -1297,12 +1205,12 @@
       <workItem from="1402908416298" duration="15951000" />
       <workItem from="1402937147530" duration="1437000" />
       <workItem from="1402938614224" duration="6970000" />
-      <workItem from="1402946031827" duration="9887000" />
+      <workItem from="1402946031827" duration="11685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188433000" />
+    <option name="totallyTimeSpent" value="190231000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1325,8 +1233,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1351,7 +1259,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3089124" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5826377" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27492446" sideWeight="0.49916527" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.8013356" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8013356" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46076795" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1578,13 +1486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.059336822" vertical-offset="0" max-vertical-offset="573">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="244" column="20" selection-start="7948" selection-end="7948" vertical-scroll-proportion="0.270073" vertical-offset="4000" max-vertical-offset="5219">
@@ -1668,13 +1569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="27" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/IMessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
@@ -1699,13 +1593,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="76" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-14.76" vertical-offset="107" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/security-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="65" selection-start="809" selection-end="820" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
@@ -1751,14 +1638,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/service-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="51" selection-start="342" selection-end="342" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="510">
+        <state line="5" column="51" selection-start="342" selection-end="342" vertical-scroll-proportion="0.1551095" vertical-offset="0" max-vertical-offset="548">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/db-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="11" selection-start="302" selection-end="302" vertical-scroll-proportion="1.8085107" vertical-offset="0" max-vertical-offset="612">
+        <state line="13" column="35" selection-start="696" selection-end="696" vertical-scroll-proportion="-5.44" vertical-offset="85" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chat/services/impl/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="27" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/security-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="41" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.56569344" vertical-offset="132" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.059336822" vertical-offset="0" max-vertical-offset="573">
           <folding />
         </state>
       </provider>
