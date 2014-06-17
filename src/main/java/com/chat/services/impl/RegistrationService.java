@@ -43,7 +43,7 @@ public class RegistrationService implements IRegistrationService {
         setAuthority(user);
         user.setPassword(passwordEncoder.encodePassword(user.getPassword(), user.getName()));
         userService.save(user);
-        log.info(user.getName() + "has been registered");
+        log.info(user.getName() + " - has been registered");
     }
 
     public void setAuthority(User user) {

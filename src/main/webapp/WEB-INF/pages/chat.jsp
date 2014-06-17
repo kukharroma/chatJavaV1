@@ -54,7 +54,8 @@
 <script id="UserItemTmpl" type="text/template">
     <div class="userItem" style="padding-left: 10px;<#if(online){#>
     <#if(user==name){#>
-        background: blue;
+        background: chartreuse;
+        color: blue;
     <#}else{#>
         background: chartreuse;
     <#}#>

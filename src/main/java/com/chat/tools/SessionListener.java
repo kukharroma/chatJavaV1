@@ -35,7 +35,7 @@ public class SessionListener implements HttpSessionListener , IDBConfiguration {
                 e.printStackTrace();
             }
             userDAO.save(user);
-            log.info(user.getName() + " logout");
+            log.info(user.getName() + " - logout");
         }
     }
 
