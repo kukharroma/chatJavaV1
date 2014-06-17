@@ -6,7 +6,7 @@ var UserCommonView = Backbone.View.extend({
 
         setInterval(function(){
            _this.loadUsers();
-        }, 3000)
+        }, 30000)
     },
 
     loadUsers: function(){

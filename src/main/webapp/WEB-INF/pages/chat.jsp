@@ -77,7 +77,7 @@
                             color: blue;
                                 <#}else{#>
                             color: red;
-                        <#}#>; font-size: 22px; "><#= sender.name #></span>:
+                        <#}#>; font-size: 18px  ; "><#= sender.name #></span>:
                 </td>
             </tr>
             <tr>

@@ -3,6 +3,7 @@ package com.chat.services.impl;
 import com.chat.dao.IMessageDAO;
 import com.chat.model.Message;
 import com.chat.services.IMessageService;
+import org.apache.log4j.Logger;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -10,6 +11,8 @@ import java.util.List;
 
 
 public class MessageService implements IMessageService {
+
+    private static final Logger log = Logger.getLogger(MessageService.class);
 
     @Resource(name = "messageDAO")
     private IMessageDAO massageDAO;

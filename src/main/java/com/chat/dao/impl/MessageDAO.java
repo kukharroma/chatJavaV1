@@ -7,11 +7,14 @@ import com.google.code.morphia.Morphia;
 import com.google.code.morphia.dao.BasicDAO;
 import com.mongodb.Mongo;
 import com.sun.corba.se.spi.ior.ObjectId;
+import org.apache.log4j.Logger;
 
 import java.util.Date;
 import java.util.List;
 
 public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageDAO {
+
+    private static final Logger log = Logger.getLogger(MessageDAO.class);
 
     protected MessageDAO(Mongo mongo, Morphia morphia, String dbName) {
         super(mongo, morphia, dbName);

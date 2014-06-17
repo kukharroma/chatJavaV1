@@ -2,6 +2,7 @@ package com.chat.controllers;
 
 import com.chat.model.User;
 import com.chat.services.IRegistrationService;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +14,8 @@ import java.util.Map;
 
 @Controller
 public class RegistrationController {
+
+    private static final Logger log = Logger.getLogger(RegistrationController.class);
 
     @Resource(name = "registrationService")
     private IRegistrationService registrationService;

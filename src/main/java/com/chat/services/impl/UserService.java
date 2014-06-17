@@ -3,6 +3,7 @@ package com.chat.services.impl;
 import com.chat.dao.IUserDAO;
 import com.chat.model.User;
 import com.chat.services.IUserService;
+import org.apache.log4j.Logger;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,6 +13,8 @@ import java.util.List;
 
 
 public class UserService implements IUserService, UserDetailsService {
+
+    private static final Logger log = Logger.getLogger(UserService.class);
 
     @Resource(name = "userDAO")
     IUserDAO userDAO;

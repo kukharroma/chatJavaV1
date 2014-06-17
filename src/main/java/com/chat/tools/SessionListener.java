@@ -6,6 +6,7 @@ import com.chat.dao.impl.UserDAO;
 import com.chat.model.User;
 import com.google.code.morphia.Morphia;
 import com.mongodb.Mongo;
+import org.apache.log4j.Logger;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.servlet.http.HttpSessionEvent;
@@ -16,6 +17,8 @@ import java.net.UnknownHostException;
 public class SessionListener implements HttpSessionListener , IDBConfiguration {
 
     private IUserDAO userDAO;
+
+    private static final Logger log = Logger.getLogger(SessionListener.class);
 
     @Override
     public void sessionCreated(HttpSessionEvent sessionEvent) {
@@ -32,6 +35,7 @@ public class SessionListener implements HttpSessionListener , IDBConfiguration {
                 e.printStackTrace();
             }
             userDAO.save(user);
+            log.info(user.getName() + " logout");
         }
     }
 

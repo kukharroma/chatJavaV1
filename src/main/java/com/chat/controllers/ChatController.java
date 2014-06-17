@@ -4,15 +4,8 @@ import com.chat.model.Message;
 import com.chat.model.User;
 import com.chat.services.IMessageService;
 import com.chat.services.IUserService;
-import com.sun.deploy.net.HttpResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpRequest;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.session.SessionRegistry;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +19,8 @@ import java.util.List;
 @Controller
 public class ChatController extends BaseController {
 
+    private static final Logger log = Logger.getLogger(ChatController.class);
+
     @Resource(name = "messageService")
     private IMessageService messageService;
 
@@ -37,6 +32,7 @@ public class ChatController extends BaseController {
         User user = getLoggedPerson();
         user.setOnline(true);
         userService.save(user);
+        log.info(user.getName() + " logged in");
         model.put("name", user.getName());
         return "chat";
     }
@@ -48,6 +44,7 @@ public class ChatController extends BaseController {
         User user = getLoggedPerson();
         Message message = createMessage(user, text);
         messageService.save(message);
+        log.info(user.getName() + " has sent a message");
         return message;
     }
 

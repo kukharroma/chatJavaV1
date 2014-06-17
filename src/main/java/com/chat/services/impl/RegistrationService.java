@@ -6,6 +6,7 @@ import com.chat.model.authority.AuthorityBean;
 import com.chat.services.IRegistrationService;
 import com.chat.services.IUserService;
 import com.chat.services.validator.IUserValidator;
+import org.apache.log4j.Logger;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 
 import javax.annotation.Resource;
@@ -15,6 +16,8 @@ import java.util.Set;
 
 
 public class RegistrationService implements IRegistrationService {
+
+    private static final Logger log = Logger.getLogger(RegistrationService.class);
 
     @Resource(name = "userValidator")
     private IUserValidator userValidator;
@@ -40,6 +43,7 @@ public class RegistrationService implements IRegistrationService {
         setAuthority(user);
         user.setPassword(passwordEncoder.encodePassword(user.getPassword(), user.getName()));
         userService.save(user);
+        log.info(user.getName() + "has been registered");
     }
 
     public void setAuthority(User user) {
