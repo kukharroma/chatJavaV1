@@ -32,7 +32,7 @@ public class UserValidator implements IUserValidator {
     public void validateName(User user, Map<String, Object> mapErrors) {
         if (user.getName().trim().isEmpty()) {
             mapErrors.put("nameFailed", "Логін пустий");
-            log.info("registration with empty name");
+            log.info("registration : anonymous sent empty login");
         }
         if(isNameUsed(user)){
             mapErrors.put("nameFailed", "Такий логін вже використовується");
@@ -44,7 +44,7 @@ public class UserValidator implements IUserValidator {
     public void validatePassword(User user, Map<String, Object> mapErrors) {
         if (user.getPassword().trim().isEmpty()) {
             mapErrors.put("passwordFailed", "Пароль пустий");
-            log.info("registration with empty password");
+            log.info("registration : anonymous sent empty password");
         }
     }
 

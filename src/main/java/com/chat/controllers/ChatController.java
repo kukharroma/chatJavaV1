@@ -32,7 +32,7 @@ public class ChatController extends BaseController {
         User user = getLoggedPerson();
         user.setOnline(true);
         userService.save(user);
-        log.info(user.getName() + " - logged in");
+        log.info("user : " + user.getName() + " - logged in");
         model.put("name", user.getName());
         return "chat";
     }
@@ -44,7 +44,7 @@ public class ChatController extends BaseController {
         User user = getLoggedPerson();
         Message message = createMessage(user, text);
         messageService.save(message);
-        log.info(user.getName() + " - has sent a message");
+        log.info("user : " + user.getName() + " - has sent a message");
         return message;
     }
 
