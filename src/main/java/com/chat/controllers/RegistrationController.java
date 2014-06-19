@@ -31,6 +31,7 @@ public class RegistrationController {
         Map<String, Object> map = registrationService.registration(user);
         if (map == null) {
             model.put("registered", true);
+            model.put("user", new User());
             return "registration";
         } else {
             model.put("mapErrors", map);
