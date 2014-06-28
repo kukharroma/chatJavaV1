@@ -5,14 +5,17 @@ var SendMessage = Backbone.View.extend({
         "click [send-message]":"send",
         "keyup #messageInput": "messageInputKeyDown"
     },
-    initialize: function(){
 
+
+    initialize: function(){
         this.render();
     },
+
     render: function(){
         var template = $(this.template).html()
         this.$el.html(template)
     },
+
     send: function(){
         var _this = this;
         var textArea = _this.$("#messageInput")
@@ -22,9 +25,6 @@ var SendMessage = Backbone.View.extend({
                 type: "POST",
                 data: {text: textArea.val().toString()},
                 success: function(data){
-//                    var model = new MessagesItemModel(data);
-//                    new MessagesItemView({model: model, container: "#messages_list"})
-//                    Backbone.trigger("scroll-list-messages","bottom")
                     textArea.val('')
                 }
             })

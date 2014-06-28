@@ -6,12 +6,9 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 
-<%@ page import="java.util.Properties" %>
-<%@ page import="org.springframework.web.context.support.WebApplicationContextUtils" %>
-
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <c:set var="currentLanguage" value="${pageContext.response.locale.language}"/>
 
 <security:authorize access="isAuthenticated()">
-    <security:authentication var="principal" property="principal" />
+    <security:authentication var="principal" property="principal"/>
 </security:authorize>

@@ -1,6 +1,7 @@
 
 var MessagesCommonView = Backbone.View.extend({
     container : "#messages_list",
+
     initialize: function(attr){
         this.loadMessages()
         var _this = this
@@ -9,7 +10,7 @@ var MessagesCommonView = Backbone.View.extend({
             _this.loadLastSecondMessages(_this)
         }, 1000)
 
-        this.listenTo(Backbone,"scroll-list-messages",this.scrollTo,this)
+//        this.listenTo(Backbone, "scroll-list-messages",this.scrollTo,this)
     },
 
     loadMessages: function($this){

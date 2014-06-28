@@ -10,6 +10,7 @@
     <properties>
         <spring.version>3.2.0.RELEASE</spring.version>
         <tiles.version>2.2.2</tiles.version>
+        <jetty.version>9.1.4.v20140401</jetty.version>
     </properties>
 
     <dependencies>

@@ -35,7 +35,6 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
         return getDatastore().createQuery(Message.class).asList();
     }
 
-
     @Override
     public List<Message> getMessagesByLastSecond(String dateFrom) {
         long longDate = Long.valueOf(dateFrom);

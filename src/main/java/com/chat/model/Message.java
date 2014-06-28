@@ -18,7 +18,6 @@ public class Message {
     private User sender;
 
     @DateTimeFormat(pattern = "HH:mm dd/MM/yyyy")
-    @Temporal(value = TemporalType.TIMESTAMP)
     private Date date;
 
     private String message;
