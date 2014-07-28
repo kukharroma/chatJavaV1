@@ -28,6 +28,12 @@ public class RegistrationService implements IRegistrationService {
     @Resource(name = "passwordEncoder")
     private Md5PasswordEncoder passwordEncoder;
 
+    /**
+     * This method returns a map of errors if your user is not valid. Else this method returns null
+     *
+     * @param user a link to user you want to validate
+     * @return
+     */
     @Override
     public Map<String, Object> registration(User user) {
         Map<String, Object> mapErrors = userValidator.validateUser(user);
@@ -39,6 +45,11 @@ public class RegistrationService implements IRegistrationService {
         }
     }
 
+    /**
+     * This method registers a user in database, encode password and set roles.
+     *
+     * @param user link to user you want to register
+     */
     public void registerUser(User user) {
         setAuthority(user);
         user.setPassword(passwordEncoder.encodePassword(user.getPassword(), user.getName()));
@@ -46,6 +57,11 @@ public class RegistrationService implements IRegistrationService {
         log.info("user : " + user.getName() + " - has been registered");
     }
 
+    /**
+     * This method set roles to the user
+     *
+     * @param user a link to user you want set Authority
+     */
     public void setAuthority(User user) {
         Set<AuthorityBean> authorities = new HashSet();
         AuthorityBean authorityBean = new AuthorityBean();

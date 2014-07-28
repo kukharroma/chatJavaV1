@@ -81,7 +81,7 @@ public class ChatController extends BaseController {
     @RequestMapping(value = "/getAllMessagesByLastSecond", method = RequestMethod.GET)
     @ResponseBody
     public List<Message> getAllMessagesByLastSecond(String dateFrom) {
-        List<Message> messageList = messageService.getAllMessagesByLastSecond(dateFrom);
+        List<Message> messageList = messageService.getMessagesFromSecond(dateFrom);
         return messageList;
     }
 }

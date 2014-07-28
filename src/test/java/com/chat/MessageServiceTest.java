@@ -63,13 +63,13 @@ public class MessageServiceTest extends BasicMessageTest {
         messageService.save(createMessage(new User(), "message", new Date(1406494321586L)));
         messageService.save(createMessage(new User(), "message", new Date(1406494325696L)));
 
-        List<Message> list = messageService.getAllMessagesByLastSecond(String.valueOf(new Date().getTime()));
+        List<Message> list = messageService.getMessagesFromSecond(String.valueOf(new Date().getTime()));
         assertEquals(0, list.size());
-        list = messageService.getAllMessagesByLastSecond(String.valueOf(1406494322820L));
+        list = messageService.getMessagesFromSecond(String.valueOf(1406494322820L));
         assertEquals(7, list.size());
-        list = messageService.getAllMessagesByLastSecond(String.valueOf(1406494355685L));
+        list = messageService.getMessagesFromSecond(String.valueOf(1406494355685L));
         assertEquals(0, list.size());
-        list = messageService.getAllMessagesByLastSecond(String.valueOf(1406491355685L));
+        list = messageService.getMessagesFromSecond(String.valueOf(1406491355685L));
         assertEquals(10, list.size());
 
     }

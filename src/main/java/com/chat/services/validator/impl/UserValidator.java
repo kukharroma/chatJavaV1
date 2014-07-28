@@ -4,7 +4,6 @@ package com.chat.services.validator.impl;
 import com.chat.model.User;
 import com.chat.services.IUserService;
 import com.chat.services.validator.IUserValidator;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import javax.annotation.Resource;
@@ -20,6 +19,14 @@ public class UserValidator implements IUserValidator {
     @Resource(name = "userService")
     IUserService userService;
 
+    /**
+     * This method validates the user.
+     * If your user is not valid method returns map of errors.
+     * Else method returns null
+     *
+     * @param user link to user you want to validate
+     * @return
+     */
     @Override
     public Map<String, Object> validateUser(User user) {
         Map<String, Object> map = new HashMap<String, Object>();
@@ -28,18 +35,30 @@ public class UserValidator implements IUserValidator {
         return map;
     }
 
+    /**
+     * This method validates the name. Name cannot be empty
+     *
+     * @param user      link to user you want to check the name
+     * @param mapErrors map of errors
+     */
     @Override
     public void validateName(User user, Map<String, Object> mapErrors) {
         if (user.getName().trim().isEmpty()) {
             mapErrors.put("nameFailed", "Логін пустий");
             log.info("registration : anonymous sent empty login");
         }
-        if(isNameUsed(user)){
+        if (isNameUsed(user)) {
             mapErrors.put("nameFailed", "Такий логін вже використовується");
             log.info("registration : such login (" + user.getName() + ") is used ");
         }
     }
 
+    /**
+     * This method validates the password. Password cannot be empty
+     *
+     * @param user      link to user you want to check the password
+     * @param mapErrors map of errors
+     */
     @Override
     public void validatePassword(User user, Map<String, Object> mapErrors) {
         if (user.getPassword().trim().isEmpty()) {
@@ -48,10 +67,16 @@ public class UserValidator implements IUserValidator {
         }
     }
 
-    private boolean isNameUsed(User user){
+    /**
+     * This method checks if such name of user is used
+     *
+     * @param user link to user you want to check the name
+     * @return true if such name is used or false if such name is not used.
+     */
+    private boolean isNameUsed(User user) {
         List<User> allUsers = userService.getAllUsers();
-        for (User compareUser: allUsers){
-            if(compareUser.getName().equals(user.getName())){
+        for (User compareUser : allUsers) {
+            if (compareUser.getName().equals(user.getName())) {
                 return true;
             }
         }
