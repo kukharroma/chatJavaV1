@@ -26,17 +26,24 @@ public class WelcomeController extends BaseController {
         return "welcome";
     }
 
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         return "login";
     }
 
+    /**
+     * This method calls when login is failed
+     */
     @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
     public String loginFailed(ModelMap model) {
         model.put("error", "true");
         return "login";
     }
 
+    /**
+     * This method calls when user want to logout
+     */
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout() {
         return "welcome";

@@ -20,12 +20,19 @@ public class RegistrationController {
     @Resource(name = "registrationService")
     private IRegistrationService registrationService;
 
+    /**
+     * This method calls when user steps to registration page
+     */
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registrationPage(ModelMap modelMap) {
         initRegisrtationParam(modelMap);
         return "registration";
     }
 
+    /**
+     * This method registers a user
+     * @param user user you want to register
+     */
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("user") User user, ModelMap model) {
         Map<String, Object> map = registrationService.registration(user);
@@ -39,6 +46,9 @@ public class RegistrationController {
         }
     }
 
+    /**
+     * This method init param which are needed for registration
+     */
     private void initRegisrtationParam(Map<String, Object> model) {
         model.put("user", new User());
         model.put("registered", false);

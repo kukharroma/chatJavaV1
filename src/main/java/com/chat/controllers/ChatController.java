@@ -27,6 +27,9 @@ public class ChatController extends BaseController {
     @Resource(name = "userService")
     private IUserService userService;
 
+    /**
+     * This method calls when user step to chat page
+     */
     @RequestMapping(value = "/chat", method = RequestMethod.GET)
     public String chat(ModelMap model) {
         User user = getLoggedPerson();
@@ -37,6 +40,11 @@ public class ChatController extends BaseController {
         return "chat";
     }
 
+    /**
+     * This method calls when user want to send a message
+     *
+     * @param text test of message which user want to send
+     */
     @RequestMapping(value = "/sendMessageToChat", method = RequestMethod.POST)
     @ResponseBody
     public Message sendMessage(@RequestParam String text) {
@@ -48,6 +56,13 @@ public class ChatController extends BaseController {
         return message;
     }
 
+    /**
+     * This method returns a message
+     *
+     * @param user link to user who wants to send a message
+     * @param text text of message
+     * @return created message
+     */
     private Message createMessage(User user, String text) {
         Message message = new Message();
         message.setSender(user);
@@ -56,7 +71,11 @@ public class ChatController extends BaseController {
         return message;
     }
 
-
+    /**
+     * This method returns all users
+     *
+     * @return list of all users
+     */
     @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
     @ResponseBody
     public List<User> getAllUsers() {
@@ -64,6 +83,11 @@ public class ChatController extends BaseController {
         return userList;
     }
 
+    /**
+     * This method returns all messages
+     *
+     * @return list of messages
+     */
     @RequestMapping(value = "/getAllMessages", method = RequestMethod.GET)
     @ResponseBody
     public List<Message> getAllMessages() {
@@ -71,6 +95,11 @@ public class ChatController extends BaseController {
         return messageList;
     }
 
+    /**
+     * This method returns list of last hundred messages
+     *
+     * @return list of messages
+     */
     @RequestMapping(value = "/getLasHundredMessages", method = RequestMethod.GET)
     @ResponseBody
     public List<Message> getLasHundredMessages() {
@@ -78,6 +107,12 @@ public class ChatController extends BaseController {
         return messageList;
     }
 
+    /**
+     * This method returns that messages which were written from some time by current time
+     *
+     * @param dateFrom - time from which you want to get messages
+     * @return - a list of messages
+     */
     @RequestMapping(value = "/getAllMessagesByLastSecond", method = RequestMethod.GET)
     @ResponseBody
     public List<Message> getAllMessagesByLastSecond(String dateFrom) {
