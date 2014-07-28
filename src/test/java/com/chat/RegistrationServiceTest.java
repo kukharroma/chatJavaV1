@@ -1,7 +1,9 @@
-package com.chat.services;
+package com.chat;
 
 
 import com.chat.model.User;
+import com.chat.services.IRegistrationService;
+import com.chat.services.IUserService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

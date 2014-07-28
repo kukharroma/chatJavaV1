@@ -1,4 +1,4 @@
-package com.chat.services;
+package com.chat;
 
 
 import com.chat.model.User;
