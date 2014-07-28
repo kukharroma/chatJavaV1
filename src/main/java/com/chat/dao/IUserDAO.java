@@ -9,11 +9,27 @@ import java.util.List;
 
 public interface IUserDAO extends DAO<User, ObjectId> {
 
+    /**
+     *
+     * @param username name of user you want to load
+     * @return instance of user
+     */
     public User loadUserByUsername(String username);
 
+    /**
+     *
+     * @return list of users
+     */
     public List<User> getAllOnlineUser();
 
+    /**
+     *
+     * @return list of users
+     */
     public List<User> getAllUsers();
 
+    /**
+     * Delete all users
+     */
     public void deleteAllUsers();
 }

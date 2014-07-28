@@ -16,10 +16,21 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
 
     private static final Logger log = Logger.getLogger(MessageDAO.class);
 
+    /**
+     * Create a MessageDAO that represents method which allows access to messages in database
+     * @param mongo instance of Mongo
+     * @param morphia  instance of Morphia
+     * @param dbName name of database
+     */
     protected MessageDAO(Mongo mongo, Morphia morphia, String dbName) {
         super(mongo, morphia, dbName);
     }
 
+    /**
+     * This method returns last hundred messages from database
+     *
+     * @return - a list of messages
+     */
     @Override
     public List<Message> getLasHundredMessages() {
         List<Message> list = getDatastore().createQuery(Message.class).asList();
@@ -30,18 +41,32 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
         }
     }
 
+    /**
+     * This method returns all messages from database
+     *
+     * @return - a list of messages
+     */
     @Override
     public List<Message> getAllMessages() {
         return getDatastore().createQuery(Message.class).asList();
     }
 
+    /**
+     * This method returns that messages which were written from some time by current time
+     *
+     * @param dateFrom - time from which you want to get messages
+     * @return - a list of messages
+     */
     @Override
-    public List<Message> getMessagesByLastSecond(String dateFrom) {
+    public List<Message> getMessagesFromSecond(String dateFrom) {
         long longDate = Long.valueOf(dateFrom);
         Date date = new Date(longDate);
         return getDatastore().createQuery(Message.class).field("date").greaterThan(date).asList();
     }
 
+    /**
+     * Delete all messages from database
+     */
     @Override
     public void deleteAllMessages() {
         deleteByQuery(getDatastore().createQuery(Message.class));

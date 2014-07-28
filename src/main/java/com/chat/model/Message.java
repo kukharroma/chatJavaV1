@@ -12,14 +12,26 @@ import java.util.Date;
 
 public class Message {
 
+    /**
+     * id of message
+     */
     @Id
     private ObjectId id;
 
+    /**
+     * link to user, who created this message
+     */
     private User sender;
 
+    /**
+     * date of creating the message
+     */
     @DateTimeFormat(pattern = "HH:mm dd/MM/yyyy")
     private Date date;
 
+    /**
+     * text of message
+     */
     private String message;
 
     public ObjectId getId() {

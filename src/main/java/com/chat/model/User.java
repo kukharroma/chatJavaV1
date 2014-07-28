@@ -15,13 +15,25 @@ import java.util.Set;
 
 public class User implements UserDetails {
 
+    /**
+     * user's id
+     */
     @Id
     private ObjectId id;
 
+    /**
+     * user's name (or login)
+     */
     private String name;
 
+    /**
+     * user's password
+     */
     private String password;
 
+    /**
+     * set of user's roles
+     */
     private Set<AuthorityBean> authorities;
 
     private boolean isAccountNonExpired = true;
@@ -32,8 +44,15 @@ public class User implements UserDetails {
 
     private boolean isEnabled = true;
 
+    /**
+     *  show user is online or offline
+     */
     private boolean online = false;
 
+    /**
+     * Returns a Collection of all roles which user has
+     * @return - list of roles
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         if (authorities != null && !authorities.isEmpty()) {
@@ -46,6 +65,7 @@ public class User implements UserDetails {
         }
         return null;
     }
+
 
     @Override
     public String getPassword() {

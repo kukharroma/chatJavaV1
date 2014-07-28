@@ -6,7 +6,6 @@ import com.chat.services.IMessageService;
 import org.apache.log4j.Logger;
 
 import javax.annotation.Resource;
-import java.util.Date;
 import java.util.List;
 
 
@@ -29,7 +28,7 @@ public class MessageService implements IMessageService {
 
     @Override
     public List<Message> getAllMessagesByLastSecond(String dateFrom) {
-        return massageDAO.getMessagesByLastSecond(dateFrom);
+        return massageDAO.getMessagesFromSecond(dateFrom);
     }
 
     @Override

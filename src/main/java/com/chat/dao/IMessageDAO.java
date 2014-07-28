@@ -10,11 +10,27 @@ import java.util.List;
 
 public interface IMessageDAO extends DAO<Message, ObjectId> {
 
+    /**
+     *
+     * @return list of messages
+     */
     public List<Message> getLasHundredMessages();
 
+    /**
+     *
+     * @return list of messages
+     */
     public List<Message> getAllMessages();
 
-    public List<Message> getMessagesByLastSecond(String dateFrom);
+    /**
+     *
+     * @param dateFrom time from which you want to get messages
+     * @return list of messages
+     */
+    public List<Message> getMessagesFromSecond(String dateFrom);
 
+    /**
+     * Delete all messages
+     */
     public void deleteAllMessages();
 }
