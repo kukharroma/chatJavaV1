@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSessionListener;
 import java.net.UnknownHostException;
 
 
-public class SessionListener implements HttpSessionListener , IDBConfiguration {
+public class SessionListener implements HttpSessionListener, IDBConfiguration {
 
     private IUserDAO userDAO;
 
@@ -33,10 +33,10 @@ public class SessionListener implements HttpSessionListener , IDBConfiguration {
                 userDAO = new UserDAO(new Mongo(), new Morphia(), DB_NAME);
             } catch (UnknownHostException e) {
                 e.printStackTrace();
-                log.error("cannot create userDAO, "  + "dbName = " + DB_NAME);
+                log.error("cannot create userDAO, " + "dbName = " + DB_NAME);
             }
             userDAO.save(user);
-            log.info("user : "+user.getName() + " - logout");
+            log.info("user : " + user.getName() + " - logout");
         }
     }
 

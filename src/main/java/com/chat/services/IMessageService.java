@@ -16,4 +16,6 @@ public interface IMessageService {
 
     public List<Message> getLasHundredMessages();
 
+    public void deleteAllMessages();
+
 }

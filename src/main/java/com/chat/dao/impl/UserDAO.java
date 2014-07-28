@@ -33,4 +33,9 @@ public class UserDAO extends BasicDAO<User, ObjectId> implements IUserDAO {
     public List<User> getAllUsers() {
         return getDatastore().createQuery(User.class).asList();
     }
+
+    @Override
+    public void deleteAllUsers() {
+        deleteByQuery(getDatastore().createQuery(User.class));
+    }
 }

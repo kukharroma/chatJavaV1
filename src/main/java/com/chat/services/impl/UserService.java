@@ -37,4 +37,9 @@ public class UserService implements IUserService, UserDetailsService {
     public List<User> getAllOnlineUser(){
        return userDAO.getAllOnlineUser();
     }
+
+    @Override
+    public void deleteAllUsers() {
+        userDAO.deleteAllUsers();
+    }
 }

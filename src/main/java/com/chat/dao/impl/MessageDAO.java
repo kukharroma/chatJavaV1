@@ -41,4 +41,9 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
         Date date = new Date(longDate);
         return getDatastore().createQuery(Message.class).field("date").greaterThan(date).asList();
     }
+
+    @Override
+    public void deleteAllMessages() {
+        deleteByQuery(getDatastore().createQuery(Message.class));
+    }
 }

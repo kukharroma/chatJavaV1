@@ -19,13 +19,13 @@
     <bean id="userDAO" class ="com.chat.dao.impl.UserDAO">
         <constructor-arg index="0" ref="mongo"/>
         <constructor-arg index="1" ref="morphia"/>
-        <constructor-arg index="2" value="chatDB"/>
+        <constructor-arg index="2" value="chatDB-test"/>
     </bean>
 
     <bean id="messageDAO" class="com.chat.dao.impl.MessageDAO">
         <constructor-arg index="0" ref="mongo"/>
         <constructor-arg index="1" ref="morphia"/>
-        <constructor-arg index="2" value="chatDB"/>
+        <constructor-arg index="2" value="chatDB-test"/>
     </bean>
 
 </beans>

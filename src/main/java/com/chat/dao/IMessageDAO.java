@@ -15,4 +15,6 @@ public interface IMessageDAO extends DAO<Message, ObjectId> {
     public List<Message> getAllMessages();
 
     public List<Message> getMessagesByLastSecond(String dateFrom);
+
+    public void deleteAllMessages();
 }

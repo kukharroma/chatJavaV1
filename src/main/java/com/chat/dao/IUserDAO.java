@@ -15,4 +15,5 @@ public interface IUserDAO extends DAO<User, ObjectId> {
 
     public List<User> getAllUsers();
 
+    public void deleteAllUsers();
 }

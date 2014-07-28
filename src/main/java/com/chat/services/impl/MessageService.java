@@ -36,4 +36,9 @@ public class MessageService implements IMessageService {
     public List<Message> getLasHundredMessages() {
         return massageDAO.getLasHundredMessages();
     }
+
+    @Override
+    public void deleteAllMessages() {
+        massageDAO.deleteAllMessages();
+    }
 }

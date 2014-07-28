@@ -13,4 +13,6 @@ public interface IUserService {
 
     public List<User> getAllOnlineUser();
 
+    public void deleteAllUsers();
+
 }
