@@ -7,6 +7,11 @@ import com.sun.corba.se.spi.ior.ObjectId;
 
 import java.util.List;
 
+/**
+ * You can implement this interface if you want to
+ * declare method which will work with messages
+ *
+ */
 public interface IUserDAO extends DAO<User, ObjectId> {
 
     /**

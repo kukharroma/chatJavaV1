@@ -11,12 +11,19 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
+/**
+ * Provides methods that allow you to interact with users
+ * Has one constructor which consists of three objects (instance
+ * of Mongo, of Morphia and name of database in  String)
+ */
 public class UserDAO extends BasicDAO<User, ObjectId> implements IUserDAO {
 
     private static final Logger log = Logger.getLogger(UserDAO.class);
 
     /**
-     *  Create a UserDAO that represents method which allows access to users in database
+     * Constructor of UserDAO needs three params (instance
+     * of Mongo, of Morphia and name of database in String)
+     *
      * @param mongo instance of Mongo
      * @param morphia  instance of Morphia
      * @param dbName name of database
@@ -26,7 +33,7 @@ public class UserDAO extends BasicDAO<User, ObjectId> implements IUserDAO {
     }
 
     /**
-     * This method returns a user by name
+     * Returns a user by name
      * @param name name of user you want to load
      * @return instance of User
      */
@@ -36,7 +43,7 @@ public class UserDAO extends BasicDAO<User, ObjectId> implements IUserDAO {
     }
 
     /**
-     * This method returns all users which are online (online is true)
+     * Returns all users which are online (online is true)
      * @return list of users
      */
     @Override
@@ -45,7 +52,7 @@ public class UserDAO extends BasicDAO<User, ObjectId> implements IUserDAO {
     }
 
     /**
-     * This method returns all users
+     * Returns all users
      * @return list of users
      */
     @Override
@@ -54,7 +61,7 @@ public class UserDAO extends BasicDAO<User, ObjectId> implements IUserDAO {
     }
 
     /**
-     * Delete all users from database
+     * Delete all users
      */
     @Override
     public void deleteAllUsers() {

@@ -12,24 +12,32 @@ import org.apache.log4j.Logger;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Provides methods that allow you to interact with messaging
+ * Has one constructor which consists of three objects (instance
+ * of Mongo, of Morphia and name of database in  String )
+ *
+ * @see com.google.code.morphia.dao.BasicDAO
+ * @see com.chat.dao.IMessageDAO
+ */
 public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageDAO {
 
     private static final Logger log = Logger.getLogger(MessageDAO.class);
 
     /**
-     * Create a MessageDAO that represents method which allows access to messages in database
-     * @param mongo instance of Mongo
-     * @param morphia  instance of Morphia
-     * @param dbName name of database
+     * Constructor of MessageDAO.
+     *
+     * @param mongo   instance of Mongo
+     * @param morphia instance of Morphia
+     * @param dbName  name of database
      */
     protected MessageDAO(Mongo mongo, Morphia morphia, String dbName) {
         super(mongo, morphia, dbName);
     }
 
     /**
-     * This method returns last hundred messages from database
      *
-     * @return - a list of messages
+     * @return list of messages
      */
     @Override
     public List<Message> getLasHundredMessages() {
@@ -42,9 +50,8 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
     }
 
     /**
-     * This method returns all messages from database
      *
-     * @return - a list of messages
+     * @return list of messages
      */
     @Override
     public List<Message> getAllMessages() {
@@ -52,10 +59,9 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
     }
 
     /**
-     * This method returns that messages which were written from some time by current time
      *
      * @param dateFrom - time from which you want to get messages
-     * @return - a list of messages
+     * @return list of messages
      */
     @Override
     public List<Message> getMessagesFromSecond(String dateFrom) {

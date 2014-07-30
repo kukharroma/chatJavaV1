@@ -13,7 +13,9 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import java.net.UnknownHostException;
 
-
+/**
+ * 
+ */
 public class SessionListener implements HttpSessionListener, IDBConfiguration {
 
     private IUserDAO userDAO;
