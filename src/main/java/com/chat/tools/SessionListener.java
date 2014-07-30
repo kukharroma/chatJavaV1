@@ -40,6 +40,10 @@ public class SessionListener implements HttpSessionListener, IDBConfiguration {
         }
     }
 
+    /**
+     * This method returns the user which is logged
+     * @return instance of user
+     */
     private User getLoggedPerson() {
         if (SecurityContextHolder.getContext().getAuthentication() == null
                 || SecurityContextHolder.getContext().getAuthentication()
