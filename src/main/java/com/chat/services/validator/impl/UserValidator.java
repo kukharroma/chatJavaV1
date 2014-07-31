@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Represents methods with which you can validate users
+ */
 public class UserValidator implements IUserValidator {
 
     private static final Logger log = Logger.getLogger(UserValidator.class);
@@ -20,12 +23,12 @@ public class UserValidator implements IUserValidator {
     IUserService userService;
 
     /**
-     * This method validates the user.
+     * Validates the user.
      * If your user is not valid method returns map of errors.
      * Else method returns null
      *
-     * @param user link to user you want to validate
-     * @return
+     * @param user user you want to validate
+     * @return map of errors
      */
     @Override
     public Map<String, Object> validateUser(User user) {
@@ -36,9 +39,9 @@ public class UserValidator implements IUserValidator {
     }
 
     /**
-     * This method validates the name. Name cannot be empty
+     * Validates the name. Name cannot be empty
      *
-     * @param user      link to user you want to check the name
+     * @param user user you want to check the name
      * @param mapErrors map of errors
      */
     @Override
@@ -54,9 +57,9 @@ public class UserValidator implements IUserValidator {
     }
 
     /**
-     * This method validates the password. Password cannot be empty
+     * Validates the password. Password cannot be empty
      *
-     * @param user      link to user you want to check the password
+     * @param user user you want to check the password
      * @param mapErrors map of errors
      */
     @Override
@@ -68,9 +71,9 @@ public class UserValidator implements IUserValidator {
     }
 
     /**
-     * This method checks if such name of user is used
+     * Checks if such name of user is used
      *
-     * @param user link to user you want to check the name
+     * @param user user you want to check the name
      * @return true if such name is used or false if such name is not used.
      */
     private boolean isNameUsed(User user) {

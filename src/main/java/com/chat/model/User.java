@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
-
+/**
+ * Base class
+ */
 public class User implements UserDetails {
 
     /**

@@ -3,24 +3,31 @@ package com.chat.services;
 
 import com.chat.model.Message;
 
-import java.util.Date;
 import java.util.List;
 
+/**
+ * Represents methods which you can implements if
+ * you want to work with messages
+ */
 public interface IMessageService {
 
     /**
-     * This method saves a message
-     * @param message a link to message you want to save
+     * Saves a message
+     *
+     * @param message message you want to save
      */
     public void save(Message message);
 
     /**
+     * Returns all messages
      *
      * @return list of messages
      */
     public List<Message> getAllMessages();
 
     /**
+     * Returns that messages which were written from some time
+     * by current time
      *
      * @param dateFrom time from which you want to get messages
      * @return list of messages
@@ -28,13 +35,14 @@ public interface IMessageService {
     public List<Message> getMessagesFromSecond(String dateFrom);
 
     /**
+     * Returns last hundred messages from database
      *
      * @return list of messages
      */
     public List<Message> getLasHundredMessages();
 
     /**
-     * Delete all messages
+     * Deletes all messages
      */
     public void deleteAllMessages();
 

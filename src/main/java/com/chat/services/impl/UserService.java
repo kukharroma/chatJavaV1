@@ -11,7 +11,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import javax.annotation.Resource;
 import java.util.List;
 
-
+/**
+ * Represents methods for work with users
+ */
 public class UserService implements IUserService, UserDetailsService {
 
     private static final Logger log = Logger.getLogger(UserService.class);
@@ -21,7 +23,8 @@ public class UserService implements IUserService, UserDetailsService {
 
 
     /**
-     * This method returns a user by name
+     * Returns a user by name
+     *
      * @param username name of user you want to get
      * @return instance of User
      * @throws UsernameNotFoundException
@@ -32,8 +35,7 @@ public class UserService implements IUserService, UserDetailsService {
     }
 
     /**
-     * This method save a user
-     * @param user the link of user you want to save
+     * @param user user you want to save
      */
     @Override
     public void save(User user) {
@@ -41,7 +43,6 @@ public class UserService implements IUserService, UserDetailsService {
     }
 
     /**
-     * This method returns all users from database
      * @return list of users
      */
     @Override
@@ -50,7 +51,6 @@ public class UserService implements IUserService, UserDetailsService {
     }
 
     /**
-     * This method returns all users which are online
      * @return list of users
      */
     public List<User> getAllOnlineUser(){
@@ -58,7 +58,7 @@ public class UserService implements IUserService, UserDetailsService {
     }
 
     /**
-     * This method deletes all users from database
+     * Deletes all users
      */
     @Override
     public void deleteAllUsers() {

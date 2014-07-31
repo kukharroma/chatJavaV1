@@ -14,7 +14,10 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-
+/**
+ * Represents methods with which you can register users
+ *
+ */
 public class RegistrationService implements IRegistrationService {
 
     private static final Logger log = Logger.getLogger(RegistrationService.class);
@@ -29,9 +32,9 @@ public class RegistrationService implements IRegistrationService {
     private Md5PasswordEncoder passwordEncoder;
 
     /**
-     * This method returns a map of errors if your user is not valid. Else this method returns null
+     * Returns a map of errors if your user is not valid. Else this method returns null
      *
-     * @param user a link to user you want to validate
+     * @param user user you want to validate
      * @return
      */
     @Override
@@ -46,9 +49,9 @@ public class RegistrationService implements IRegistrationService {
     }
 
     /**
-     * This method registers a user in database, encode password and set roles.
+     * Registers a user in database, encode password and set roles.
      *
-     * @param user link to user you want to register
+     * @param user user you want to register
      */
     public void registerUser(User user) {
         setAuthority(user);
@@ -58,9 +61,9 @@ public class RegistrationService implements IRegistrationService {
     }
 
     /**
-     * This method set roles to the user
+     * Sets roles to the user
      *
-     * @param user a link to user you want set Authority
+     * @param user user you want set Authority
      */
     public void setAuthority(User user) {
         Set<AuthorityBean> authorities = new HashSet();

@@ -5,28 +5,34 @@ import com.chat.model.User;
 
 import java.util.List;
 
+/**
+ * Represents methods which you can implements if
+ * you want to work with users
+ */
 public interface IUserService {
 
     /**
-     * Save a user
-     * @param user the link of user you want to save
+     * Saves a user
+     * @param user user you want to save
      */
     public void save(User user);
 
     /**
+     * Returns all users
      *
      * @return  list of users
      */
     public List<User> getAllUsers();
 
     /**
+     * Returns all users which are online
      *
      * @return list of users
      */
     public List<User> getAllOnlineUser();
 
     /**
-     * Delete all usres
+     * Deletes all users
      */
     public void deleteAllUsers();
 
