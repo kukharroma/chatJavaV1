@@ -18,6 +18,10 @@ import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Represents methods which execute tests
+ * on class MessageService
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:/all-spring-config.xml")
 public class MessageServiceTest extends Assert {
@@ -28,6 +32,10 @@ public class MessageServiceTest extends Assert {
     @Resource(name = "userService")
     private UserService userService;
 
+    /**
+     * Clears database  from  all users and all messages
+     * before and after each test
+     */
     @Before
     @After
     public void clearDB() {
@@ -35,6 +43,9 @@ public class MessageServiceTest extends Assert {
         userService.deleteAllUsers();
     }
 
+    /**
+     * Tests saving a message
+     */
     @Test
     public void testMessageSave() {
         User user = createUser("name", "password", false);
@@ -48,6 +59,9 @@ public class MessageServiceTest extends Assert {
         assertTrue(equalsMessages(message, list.get(0)));
     }
 
+    /**
+     * Tests saving a message with empty text
+     */
     @Test(expected = NullPointerException.class)
     public void testMessageSaveWithEmptyMessage() {
         User user = createUser("name", "password", false);
@@ -61,6 +75,9 @@ public class MessageServiceTest extends Assert {
         assertTrue(equalsMessages(message, list.get(0)));
     }
 
+    /**
+     * Tests getting all messages from database
+     */
     @Test
     public void testGetAllMessages() {
         User user = createUser("name", "password", false);
@@ -88,6 +105,9 @@ public class MessageServiceTest extends Assert {
 
     }
 
+    /**
+     * Tests getting last hundred messages from database
+     */
     @Test
     public void testGetLastHundredMessages() {
         for (int k = 0; k < 125; k++) {
@@ -100,6 +120,9 @@ public class MessageServiceTest extends Assert {
         assertTrue(list.get(99).getMessage().equals("mess124"));
     }
 
+    /**
+     * Tests deleting all messages from database
+     */
     @Test
     public void testDeleteAllMessages() {
         User user = createUser("name", "password", false);
@@ -118,6 +141,14 @@ public class MessageServiceTest extends Assert {
     }
 
 
+    /**
+     * Equals two instance of Message. If objects are equal
+     * returns true else returns false.
+     *
+     * @param first  message you want to compare
+     * @param second message with whom you want to compare
+     * @return If objects are equal returns true else returns false.
+     */
     public boolean equalsMessages(Message first, Message second) {
         boolean result = true;
         result = result && first.getId().equals(second.getId());
@@ -127,6 +158,14 @@ public class MessageServiceTest extends Assert {
         return result;
     }
 
+    /**
+     * Creates an instance of Message
+     *
+     * @param user user who created a message
+     * @param mess text of message
+     * @param date date when message was created
+     * @return instance of message
+     */
     private Message createMessage(User user, String mess, Date date) {
         Message message = new Message();
         message.setId(new ObjectId());
@@ -136,6 +175,14 @@ public class MessageServiceTest extends Assert {
         return message;
     }
 
+    /**
+     * Creates an instance of User
+     *
+     * @param name     name of user
+     * @param password user's password
+     * @param online   true if user is online, false if user is offline.
+     * @return created instance of User
+     */
     private User createUser(String name, String password, Boolean online) {
         User user = new User();
         user.setId(new ObjectId());
@@ -145,6 +192,14 @@ public class MessageServiceTest extends Assert {
         return user;
     }
 
+    /**
+     * Equals two instance of User. If objects are equal
+     * returns true else returns false.
+     *
+     * @param firstUser  user you want to compare
+     * @param secondUser user with whom you want to compare
+     * @return If objects are equal returns true else returns false.
+     */
     private boolean equalsUsers(User firstUser, User secondUser) {
         boolean result = true;
         result = result && firstUser.getId().equals(secondUser.getId());

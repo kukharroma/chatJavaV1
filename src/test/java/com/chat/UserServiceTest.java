@@ -27,7 +27,8 @@ public class UserServiceTest extends Assert {
     private UserService userService;
 
     /**
-     * Clears database before and after each test
+     * Clears database from all users
+     * before and after each test
      */
     @Before
     @After
