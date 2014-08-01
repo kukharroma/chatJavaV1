@@ -15,6 +15,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.annotation.Resource;
 import java.util.List;
 
+/**
+ * Represents methods which execute tests
+ * on class UserService
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:/all-spring-config.xml")
 public class UserServiceTest extends Assert {
@@ -22,67 +26,89 @@ public class UserServiceTest extends Assert {
     @Resource(name = "userService")
     private UserService userService;
 
+    /**
+     * Clears database before and after each test
+     */
     @Before
     @After
     public void clearDB() {
         userService.deleteAllUsers();
     }
 
+    /**
+     * Tests saving a user
+     */
     @Test
     public void testSaveUser() {
-        User user = createUser("name", "password2", false);
+        User user = createUser("name", "password", false);
         List<User> list = userService.getAllUsers();
-        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
         userService.save(user);
         list = userService.getAllUsers();
-        assertEquals(1, list.size());
+        assertTrue(!list.isEmpty());
         assertTrue(equalsUsers(user, list.get(0)));
     }
 
+    /**
+     * Tests saving a user with empty password
+     */
     @Test
     public void testSaveUserEmptyPassword() {
         User user = createUser("name", "", false);
         List<User> list = userService.getAllUsers();
-        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
         userService.save(user);
         list = userService.getAllUsers();
-        assertEquals(1, list.size());
+        assertTrue(!list.isEmpty());
         assertTrue(equalsUsers(user, list.get(0)));
     }
 
+    /**
+     * Tests saving a user with empty name
+     */
     @Test
     public void testSaveUserEmptyName() {
         User user = createUser("", "password", false);
         List<User> list = userService.getAllUsers();
-        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
         userService.save(user);
         list = userService.getAllUsers();
-        assertEquals(1, list.size());
+        assertTrue(!list.isEmpty());
         assertTrue(equalsUsers(user, list.get(0)));
     }
 
+    /**
+     * Tests saving users and set them (isOnline = true)
+     */
     @Test
     public void testSaveUserOnlineTrue() {
         User user = createUser("name", "password", true);
         List<User> list = userService.getAllUsers();
-        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
         userService.save(user);
         list = userService.getAllUsers();
-        assertEquals(1, list.size());
+        assertTrue(!list.isEmpty());
         assertTrue(equalsUsers(user, list.get(0)));
     }
 
+    /**
+     * Tests saving user with empty name and password and
+     * set (isOnline = true)
+     */
     @Test
     public void testSaveUserEmptyPassAndNameOnlineTrue() {
         User user = createUser("", "", true);
         List<User> list = userService.getAllUsers();
-        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
         userService.save(user);
         list = userService.getAllUsers();
-        assertEquals(1, list.size());
+        assertTrue(!list.isEmpty());
         assertTrue(equalsUsers(user, list.get(0)));
     }
 
+    /**
+     * Tests loading a user from database by name
+     */
     @Test
     public void testLoadUserByUsername() {
         User user = createUser("name", "password", false);
@@ -91,6 +117,10 @@ public class UserServiceTest extends Assert {
         assertTrue(equalsUsers(user, testUser));
     }
 
+    /**
+     * Tests loading a user from database by name
+     * if name is empty
+     */
     @Test
     public void testLoadUserByEmptyName() {
         User user = createUser("", "password", false);
@@ -99,6 +129,9 @@ public class UserServiceTest extends Assert {
         assertTrue(equalsUsers(user, testUser));
     }
 
+    /**
+     * Tests getting all users from database
+     */
     @Test
     public void testGetAllUsers() {
         User testUser1 = createUser("testUser1", "password1", false);
@@ -132,6 +165,9 @@ public class UserServiceTest extends Assert {
 
     }
 
+    /**
+     * Tests getting all users from database which are online
+     */
     @Test
     public void testGetAllOnlineUsers() {
         User testUser1 = createUser("testUser1", "password1", true);
@@ -164,6 +200,9 @@ public class UserServiceTest extends Assert {
         assertTrue(equalsUsers(testUser8, testList.get(7)) && testList.get(7).isOnline());
     }
 
+    /**
+     * Gets all user which are not online
+     */
     @Test
     public void testGetAllOnlineUsersEmpty() {
         User testUser1 = createUser("testUser1", "password1", false);
@@ -177,13 +216,13 @@ public class UserServiceTest extends Assert {
         userService.save(testUser4);
 
         List<User> testList = userService.getAllOnlineUser();
-        assertEquals(0, testList.size());
-        assertTrue(!testList.get(0).isOnline());
-        assertTrue(!testList.get(1).isOnline());
-        assertTrue(!testList.get(2).isOnline());
-        assertTrue(!testList.get(3).isOnline());
+        assertTrue(testList.isEmpty());
+
     }
 
+    /**
+     * Tests deleting all users from database
+     */
     @Test
     public void testDeleteAllUsers() {
         User testUser1 = createUser("testUser1", "password1", false);
@@ -204,6 +243,14 @@ public class UserServiceTest extends Assert {
 
     }
 
+    /**
+     * Equals two instance of User. If objects are equal
+     * returns true else returns false.
+     *
+     * @param firstUser  user you want to compare
+     * @param secondUser user with whom you want to compare
+     * @return If objects are equal returns true else returns false.
+     */
     private boolean equalsUsers(User firstUser, User secondUser) {
         boolean result = true;
         result = result && firstUser.getId().equals(secondUser.getId());
@@ -213,6 +260,14 @@ public class UserServiceTest extends Assert {
         return result;
     }
 
+    /**
+     * Creates an instance of User
+     *
+     * @param name     name of user
+     * @param password user's password
+     * @param online   true if user is online, false if user is offline.
+     * @return created instance of User
+     */
     private User createUser(String name, String password, Boolean online) {
         User user = new User();
         user.setId(new ObjectId());
