@@ -48,8 +48,73 @@ public class MessageServiceTest extends Assert {
         assertTrue(equalsMessages(message, list.get(0)));
     }
 
-    public void testMessageSaveUserIsNull(){
+    @Test(expected = NullPointerException.class)
+    public void testMessageSaveWithEmptyMessage() {
+        User user = createUser("name", "password", false);
+        Message message = createMessage(user, null, new Date());
+        List<Message> list = messageService.getAllMessages();
+        assertTrue(list.isEmpty());
+        messageService.save(message);
+        userService.save(user);
+        list = messageService.getAllMessages();
+        assertTrue(!list.isEmpty());
+        assertTrue(equalsMessages(message, list.get(0)));
+    }
 
+    @Test
+    public void testGetAllMessages() {
+        User user = createUser("name", "password", false);
+        Message message1 = createMessage(user, "message1", new Date());
+        Message message2 = createMessage(user, "message2", new Date());
+        Message message3 = createMessage(user, "message3", new Date());
+        Message message4 = createMessage(user, "message4", new Date());
+        Message message5 = createMessage(user, "message5", new Date());
+        Message message6 = createMessage(user, "message6", new Date());
+        messageService.save(message1);
+        messageService.save(message2);
+        messageService.save(message3);
+        messageService.save(message4);
+        messageService.save(message5);
+        messageService.save(message6);
+
+        List<Message> list = messageService.getAllMessages();
+
+        assertTrue(equalsMessages(message1, list.get(0)));
+        assertTrue(equalsMessages(message2, list.get(1)));
+        assertTrue(equalsMessages(message3, list.get(2)));
+        assertTrue(equalsMessages(message4, list.get(3)));
+        assertTrue(equalsMessages(message5, list.get(4)));
+        assertTrue(equalsMessages(message6, list.get(5)));
+
+    }
+
+    @Test
+    public void testGetLastHundredMessages() {
+        for (int k = 0; k < 125; k++) {
+            Message message = createMessage(new User(), "mess" + k, new Date());
+            messageService.save(message);
+        }
+        List<Message> list = messageService.getLasHundredMessages();
+        assertEquals(100, list.size());
+        assertTrue(list.get(0).getMessage().equals("mess25"));
+        assertTrue(list.get(99).getMessage().equals("mess124"));
+    }
+
+    @Test
+    public void testDeleteAllMessages() {
+        User user = createUser("name", "password", false);
+        Message message1 = createMessage(user, "message1", new Date());
+        Message message2 = createMessage(user, "message2", new Date());
+        Message message3 = createMessage(user, "message3", new Date());
+        messageService.save(message1);
+        messageService.save(message2);
+        messageService.save(message3);
+
+        List<Message> list = messageService.getAllMessages();
+        assertTrue(!list.isEmpty());
+        messageService.deleteAllMessages();
+        list = messageService.getAllMessages();
+        assertTrue(list.isEmpty());
     }
 
 

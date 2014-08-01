@@ -35,7 +35,7 @@ public class RegistrationService implements IRegistrationService {
      * Returns a map of errors if your user is not valid. Else this method returns null
      *
      * @param user user you want to validate
-     * @return
+     * @return map of errors or null
      */
     @Override
     public Map<String, Object> registration(User user) {
