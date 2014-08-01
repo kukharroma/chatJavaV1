@@ -6,6 +6,9 @@ import org.bson.types.ObjectId;
 
 import java.io.Serializable;
 
+/**
+ * Holds one role (one Authority)
+ */
 public class AuthorityBean implements Serializable{
     /**
      * id of AuthorityBean
@@ -14,7 +17,7 @@ public class AuthorityBean implements Serializable{
     private ObjectId id;
 
     /**
-     * link to enum of users roles
+     * instance of enum Authority
      */
     private Authority authority;
 

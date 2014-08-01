@@ -1,9 +1,11 @@
 package com.chat.model.authority;
 
-
+/**
+ * Represents all roles
+ */
 public enum  Authority {
     /**
-     * this role allows to be a user of chat
+     * Allows to be a user of chat
      */
     ROLE_USER;
 }

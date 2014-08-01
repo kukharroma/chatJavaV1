@@ -22,7 +22,7 @@ public class Message {
     private ObjectId id;
 
     /**
-     * link to user, who created this message
+     * user who created this message
      */
     private User sender;
 

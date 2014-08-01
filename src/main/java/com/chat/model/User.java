@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * Base class
+ *
  */
 public class User implements UserDetails {
 
@@ -146,4 +146,5 @@ public class User implements UserDetails {
     public void setOnline(boolean online) {
         this.online = online;
     }
+
 }
