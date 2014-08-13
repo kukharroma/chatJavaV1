@@ -5,10 +5,21 @@ import com.chat.dao.IUserDAO;
 import com.chat.model.User;
 import com.google.code.morphia.Morphia;
 import com.google.code.morphia.dao.BasicDAO;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
 import com.sun.corba.se.spi.ior.ObjectId;
+import de.flapdoodle.embedmongo.MongoDBRuntime;
+import de.flapdoodle.embedmongo.MongodExecutable;
+import de.flapdoodle.embedmongo.MongodProcess;
+import de.flapdoodle.embedmongo.config.MongodConfig;
+import de.flapdoodle.embedmongo.distribution.Version;
+import de.flapdoodle.embedmongo.runtime.Network;
 import org.apache.log4j.Logger;
 
+import java.io.IOException;
+import java.net.UnknownHostException;
+import java.util.Collection;
 import java.util.List;
 
 /**

@@ -58,4 +58,5 @@ public class MessageService implements IMessageService {
     public void deleteAllMessages() {
         massageDAO.deleteAllMessages();
     }
+
 }

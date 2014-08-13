@@ -47,12 +47,13 @@ public class User implements UserDetails {
     private boolean isEnabled = true;
 
     /**
-     *  show user is online or offline
+     * show user is online or offline
      */
     private boolean online = false;
 
     /**
      * Returns a Collection of all roles which user has
+     *
      * @return - list of roles
      */
     @Override

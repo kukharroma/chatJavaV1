@@ -3,11 +3,14 @@ package com.chat;
 import com.chat.model.User;
 import com.chat.services.impl.RegistrationService;
 import com.chat.services.impl.UserService;
+import de.flapdoodle.embedmongo.MongoDBRuntime;
+import de.flapdoodle.embedmongo.MongodExecutable;
+import de.flapdoodle.embedmongo.MongodProcess;
+import de.flapdoodle.embedmongo.config.MongodConfig;
+import de.flapdoodle.embedmongo.distribution.Version;
+import de.flapdoodle.embedmongo.runtime.Network;
 import org.bson.types.ObjectId;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -29,14 +32,35 @@ public class RegistrationServiceTest extends Assert {
     @Resource(name = "userService")
     private UserService userService;
 
+    private static MongodExecutable mongodExecutable;
+
+    private static MongodProcess mongodProcess;
+
     /**
-     * Clears database from all registered users
-     * before and after each test
+     * Starts in-memory Mongo DB process
      */
-    @Before
+    @BeforeClass
+    public static void setup() throws Exception {
+        MongoDBRuntime runtime = MongoDBRuntime.getDefaultInstance();
+        mongodExecutable = runtime.prepare(new MongodConfig(Version.V1_6_5, 12345, Network.localhostIsIPv6()));
+        mongodProcess = mongodExecutable.start();
+    }
+
+    /**
+     * Cleans in-memory Mongo DB process
+     */
     @After
-    public void clearDB() {
+    public void shutDown() throws Exception {
         userService.deleteAllUsers();
+        mongodExecutable.cleanup();
+    }
+
+    /**
+     * Stops in-memory Mongo DB process
+     */
+    @AfterClass
+    public static void mongodStop() {
+        mongodProcess.stop();
     }
 
     /**

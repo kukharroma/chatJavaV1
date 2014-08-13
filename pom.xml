@@ -274,6 +274,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>de.flapdoodle.embedmongo</groupId>
+            <artifactId>de.flapdoodle.embedmongo</artifactId>
+            <version>1.11</version>
+        </dependency>
 
     </dependencies>
 

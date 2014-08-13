@@ -11,7 +11,7 @@
 
     <bean id="mongo" class="com.mongodb.MongoClient">
         <constructor-arg type="java.lang.String" value="localhost"/>
-        <constructor-arg type="int" value="27017"/>
+        <constructor-arg type="int" value="12345"/>
     </bean>
 
     <bean id="morphia" class="com.google.code.morphia.Morphia"/>
@@ -27,5 +27,8 @@
         <constructor-arg index="1" ref="morphia"/>
         <constructor-arg index="2" value="chatDB-test"/>
     </bean>
+
+
+
 
 </beans>
