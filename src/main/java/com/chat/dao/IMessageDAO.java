@@ -19,7 +19,7 @@ public interface IMessageDAO extends DAO<Message, ObjectId> {
      *
      * @return list of messages
      */
-    public List<Message> getLasHundredMessages();
+    public List<Message> getLastHundredMessages();
 
     /**
      *  Returns all messages from database

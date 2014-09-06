@@ -64,4 +64,9 @@ public class UserService implements IUserService, UserDetailsService {
     public void deleteAllUsers() {
         userDAO.deleteAllUsers();
     }
+
+    @Override
+    public void setUserDAO(IUserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 }

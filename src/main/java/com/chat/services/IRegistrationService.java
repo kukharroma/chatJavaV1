@@ -2,6 +2,7 @@ package com.chat.services;
 
 
 import com.chat.model.User;
+import com.chat.services.validator.IUserValidator;
 
 import java.util.Map;
 
@@ -31,4 +32,18 @@ public interface IRegistrationService {
      * @param user user you want set Authority
      */
     public void setAuthority(User user);
+
+    /**
+     * Sets a UserValidator for service
+     *
+     * @param userValidator validator you want set to registrationService
+     */
+    public void setUserValidator(IUserValidator userValidator);
+
+    /**
+     * Sets a UserService for regService
+     *
+     * @param userService service you want set to registrationService
+     */
+    public void setUserService(IUserService userService);
 }

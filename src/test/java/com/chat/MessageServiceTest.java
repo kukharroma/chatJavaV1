@@ -138,7 +138,7 @@ public class MessageServiceTest extends Assert {
             Message message = createMessage(new User(), "mess" + k, new Date());
             messageService.save(message);
         }
-        List<Message> list = messageService.getLasHundredMessages();
+        List<Message> list = messageService.getLastHundredMessages();
         assertEquals(100, list.size());
         assertTrue(list.get(0).getMessage().equals("mess25"));
         assertTrue(list.get(99).getMessage().equals("mess124"));

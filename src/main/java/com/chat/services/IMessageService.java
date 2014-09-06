@@ -1,6 +1,7 @@
 package com.chat.services;
 
 
+import com.chat.dao.IMessageDAO;
 import com.chat.model.Message;
 
 import java.util.List;
@@ -39,11 +40,17 @@ public interface IMessageService {
      *
      * @return list of messages
      */
-    public List<Message> getLasHundredMessages();
+    public List<Message> getLastHundredMessages();
 
     /**
      * Deletes all messages
      */
     public void deleteAllMessages();
+
+    /**
+     * Sets a DAO for messageService
+     * @param messageDAO dao you want to set for messageService
+     */
+    public void setMessageDAO(IMessageDAO messageDAO);
 
 }

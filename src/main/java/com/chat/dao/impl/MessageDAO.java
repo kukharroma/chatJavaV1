@@ -40,7 +40,7 @@ public class MessageDAO extends BasicDAO<Message, ObjectId> implements IMessageD
      * @return list of messages
      */
     @Override
-    public List<Message> getLasHundredMessages() {
+    public List<Message> getLastHundredMessages() {
         List<Message> list = getDatastore().createQuery(Message.class).asList();
         if (list.size() < 100) {
             return list;

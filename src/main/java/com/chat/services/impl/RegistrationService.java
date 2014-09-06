@@ -72,4 +72,15 @@ public class RegistrationService implements IRegistrationService {
         authorities.add(authorityBean);
         user.setAuthorities(authorities);
     }
+
+    /**
+     * @param userValidator validator you want set to registrationService
+     */
+    public void setUserValidator(IUserValidator userValidator) {
+        this.userValidator = userValidator;
+    }
+
+    public void setUserService(IUserService userService) {
+        this.userService = userService;
+    }
 }

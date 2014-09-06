@@ -1,6 +1,7 @@
 package com.chat.services;
 
 
+import com.chat.dao.IUserDAO;
 import com.chat.model.User;
 
 import java.util.List;
@@ -35,5 +36,12 @@ public interface IUserService {
      * Deletes all users
      */
     public void deleteAllUsers();
+
+    /**
+     * Sets a DAO for userService
+     *
+     * @param userDAO dao you want to set for userService
+     */
+    public void setUserDAO(IUserDAO userDAO);
 
 }

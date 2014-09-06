@@ -118,7 +118,7 @@ public class ChatController extends BaseController {
     @RequestMapping(value = "/getLasHundredMessages", method = RequestMethod.GET)
     @ResponseBody
     public List<Message> getLasHundredMessages() {
-        List<Message> messageList = messageService.getLasHundredMessages();
+        List<Message> messageList = messageService.getLastHundredMessages();
         return messageList;
     }
 

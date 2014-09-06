@@ -16,14 +16,14 @@ public class MessageService implements IMessageService {
     private static final Logger log = Logger.getLogger(MessageService.class);
 
     @Resource(name = "messageDAO")
-    private IMessageDAO massageDAO;
+    private IMessageDAO messageDAO;
 
     /**
      * @param message message you want to save
      */
     @Override
     public void save(Message message) {
-        massageDAO.save(message);
+        messageDAO.save(message);
     }
 
     /**
@@ -31,7 +31,7 @@ public class MessageService implements IMessageService {
      */
     @Override
     public List<Message> getAllMessages() {
-        return massageDAO.getAllMessages();
+        return messageDAO.getAllMessages();
     }
 
     /**
@@ -40,15 +40,15 @@ public class MessageService implements IMessageService {
      */
     @Override
     public List<Message> getMessagesFromSecond(String dateFrom) {
-        return massageDAO.getMessagesFromSecond(dateFrom);
+        return messageDAO.getMessagesFromSecond(dateFrom);
     }
 
     /**
      * @return list of messages
      */
     @Override
-    public List<Message> getLasHundredMessages() {
-        return massageDAO.getLasHundredMessages();
+    public List<Message> getLastHundredMessages() {
+        return messageDAO.getLastHundredMessages();
     }
 
     /**
@@ -56,7 +56,11 @@ public class MessageService implements IMessageService {
      */
     @Override
     public void deleteAllMessages() {
-        massageDAO.deleteAllMessages();
+        messageDAO.deleteAllMessages();
     }
 
+    @Override
+    public void setMessageDAO(IMessageDAO messageDAO) {
+        this.messageDAO = messageDAO;
+    }
 }
