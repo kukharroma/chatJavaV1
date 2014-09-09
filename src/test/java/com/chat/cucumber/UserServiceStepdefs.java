@@ -15,7 +15,6 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-@StepDefAnnotation
 @ContextConfiguration(locations = "classpath:/all-spring-config.xml")
 public class UserServiceStepdefs {
 
