@@ -9,6 +9,8 @@
 
     <mvc:annotation-driven/>
 
+
+
     <bean id="userService" class="com.chat.services.impl.UserService"/>
 
     <bean id="messageService" class="com.chat.services.impl.MessageService"/>

@@ -3,6 +3,7 @@ package com.chat.services;
 
 import com.chat.dao.IUserDAO;
 import com.chat.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
