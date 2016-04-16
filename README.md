@@ -1,5 +1,5 @@
 # Online chat.
-# Based on : HTTP, framework Spring, database Mongo.
+# Based on : HTTP, Spring, MongoDB.
 If you wanna to run this chat - first of all you need to install MongoDB database and run it, the next step is install Tomcat server. 
 Some screens:
 ![Alt text](https://github.com/kukharroma/kukharroma-chat/blob/master/src/main/resources/login-big.png "Login")
